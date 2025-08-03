@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a116da826c410e44a69475ec1062c0f, type: 3}
+  m_Name: Chikorita
+  m_EditorClassIdentifier: 
+  controller: {fileID: 9100000, guid: d3b02692ef4616a4eaffa1152c8b7c52, type: 2}
+  nama: Chikorita
+  exp: 0
+  level: 1
+  attack: 19
+  HP: 101
