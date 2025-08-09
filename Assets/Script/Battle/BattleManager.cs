@@ -133,7 +133,7 @@ public class BattleManager : MonoBehaviour
         currentBattleState = BattleState.BattleOver;
         Debug.Log("BattleOver");
         selectedPokemon.exp += 10;
-        SceneManager.LoadScene("Demo Scene");
+        SceneLoader.Instance.LoadScene("Demo Scene");
     }
 
     IEnumerator ChangeTurnDelay(float seconds)

@@ -5,9 +5,27 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager Instance;
+
     public CanvasGroup menu;
 
+    public CanvasGroup panelInventory;
+
+    public CanvasGroup panelMoney;
+
     public bool menuOpen;
+
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -44,5 +62,17 @@ public class UIManager : MonoBehaviour
     {
         menuOpen = true;
         menu.alpha = 1;
+    }
+
+    public void HideInventory()
+    {
+        panelInventory.alpha = 0;
+        panelMoney.alpha = 0;
+    }
+
+    public void ShowInventory()
+    {
+        panelInventory.alpha = 1;
+        panelMoney.alpha = 1;
     }
 }

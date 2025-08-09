@@ -21,7 +21,7 @@ public class Event : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("PokemonSelectionScene");
+            SceneLoader.Instance.LoadScene("PokemonSelectionScene");
         }
     }
 }

@@ -5,9 +5,23 @@ using TMPro;
 
 public class MoneyManager : MonoBehaviour
 {
+    public static MoneyManager Instance;
+
     public int money = 10;
 
     public TMP_Text moneyText;
+
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()

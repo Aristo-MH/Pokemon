@@ -12,8 +12,6 @@ public class Movement : MonoBehaviour
 
     private Vector2 movement;
 
-    public DialogueManager dialogueManager;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +21,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(dialogueManager.isTalking == false)
+        if(DialogueManager.Instance.isTalking == false)
         {
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");

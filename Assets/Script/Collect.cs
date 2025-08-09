@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Collect : MonoBehaviour
 {
-    public MoneyManager moneyManager;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +18,7 @@ public class Collect : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        moneyManager.AddMoney(5);
+        MoneyManager.Instance.AddMoney(5);
         Destroy(gameObject);
     }
 }

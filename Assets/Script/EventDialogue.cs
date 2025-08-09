@@ -6,8 +6,6 @@ public class EventDialogue : MonoBehaviour
 {
     public NPC npc;
 
-    public DialogueManager dialogueManager;
-
     public List<string> kata;
 
     bool isTalking;
@@ -25,7 +23,7 @@ public class EventDialogue : MonoBehaviour
         if(npc.isPlayerNearby == true && Input.GetKeyDown(KeyCode.E) && isTalking == false)
         {
             // dialogueManager.dialoguePanel.alpha = 1;
-            dialogueManager.MemunculkanDialog(kata, npc.nama);
+            DialogueManager.Instance.MemunculkanDialog(kata, npc.nama);
             isTalking = true;
         }
     }

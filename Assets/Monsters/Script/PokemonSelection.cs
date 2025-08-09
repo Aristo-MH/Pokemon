@@ -69,6 +69,6 @@ public class PokemonSelection : MonoBehaviour
     {
         PlayerPrefs.SetString("Player", pokmon[index].nama);
         PlayerPrefs.Save();
-        SceneManager.LoadScene("Demo Scene");
+        SceneLoader.Instance.LoadScene("Demo Scene");
     }
 }

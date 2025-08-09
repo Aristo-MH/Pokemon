@@ -5,6 +5,8 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager Instance;
+
     public CanvasGroup dialoguePanel;
 
     public List<string> kataKata;
@@ -16,6 +18,18 @@ public class DialogueManager : MonoBehaviour
     public int index;
 
     public bool isTalking;
+
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()

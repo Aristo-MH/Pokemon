@@ -60,7 +60,7 @@ public class MovementMonster : MonoBehaviour
             PlayerPrefs.SetInt("attackPower", monsterData.attackPower);
             PlayerPrefs.SetString("name", monsterData.name);
             PlayerPrefs.Save();
-            SceneManager.LoadScene("BattleScene");
+            SceneLoader.Instance.LoadScene("BattleScene");
         }
     }
 }
