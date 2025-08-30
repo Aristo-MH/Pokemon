@@ -8,6 +8,8 @@ public class InventoryManager : MonoBehaviour
 
     public static InventoryManager Instance;
 
+    public List<string> catchedPokemon;
+
     void Awake()
     {
         if (Instance == null)

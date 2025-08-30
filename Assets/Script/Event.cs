@@ -21,6 +21,7 @@ public class Event : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            UIManager.Instance.Hide();
             SceneLoader.Instance.LoadScene("PokemonSelectionScene");
         }
     }

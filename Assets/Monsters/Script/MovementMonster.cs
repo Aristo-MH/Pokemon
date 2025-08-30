@@ -55,6 +55,7 @@ public class MovementMonster : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            UIManager.Instance.Hide();
             Debug.Log("Bulbasaur");
             PlayerPrefs.SetInt("HP", monsterData.HP);
             PlayerPrefs.SetInt("attackPower", monsterData.attackPower);

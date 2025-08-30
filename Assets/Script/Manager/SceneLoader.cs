@@ -22,7 +22,11 @@ public class SceneLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (SceneManager.GetActiveScene().name == "BaseScene")
+        {
+            SceneManager.LoadScene("Demo Scene", LoadSceneMode.Additive);
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName("Demo Scene"));
+        }
     }
 
     // Update is called once per frame
@@ -37,10 +41,30 @@ public class SceneLoader : MonoBehaviour
         {
             UIManager.Instance.ShowInventory();
         }
+        else if (sceneName == "Main Menu")
+        {
+            Debug.Log("Loading Main Menu");
+            KeepAlive[] keepAliveObjects = FindObjectsByType<KeepAlive>(FindObjectsSortMode.None);
+            foreach (KeepAlive obj in keepAliveObjects)
+            {
+                Destroy(obj.gameObject);
+            }
+        }
         else
         {
             UIManager.Instance.HideInventory();
         }
         SceneManager.LoadScene(sceneName);
     }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("BaseScene");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+    
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -37,6 +38,10 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(SceneManager.GetActiveScene().name == "PokemonMenuScene" 
+        || SceneManager.GetActiveScene().name == "PokemonSelectionScene" 
+        || SceneManager.GetActiveScene().name == "BattleScene") return;
+
         if(Input.GetKeyDown(KeyCode.Q))
         {
             if(menuOpen == false)
@@ -52,7 +57,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    void Hide()
+    public void Hide()
     {
         menuOpen = false;
         menu.alpha = 0;

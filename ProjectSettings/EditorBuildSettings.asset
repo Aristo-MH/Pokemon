@@ -6,12 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 81247df129baa2841bdf69d7c94d8872
+  - enabled: 1
     path: Assets/Scenes/PokemonSelectionScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/PokemonMenuScene.unity
+    guid: e2b5f2d5a6b8c834dbceb0c1175359ed
   - enabled: 1
     path: Assets/Scenes/Demo Scene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/BattleScene.unity
     guid: 0ce6672283b29be488c215dd73071c2b
+  - enabled: 1
+    path: Assets/Scenes/BaseScene.unity
+    guid: 11018f41c8c9c9149a6303bf3582e17a
   m_configObjects: {}

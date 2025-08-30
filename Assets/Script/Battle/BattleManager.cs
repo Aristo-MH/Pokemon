@@ -108,6 +108,8 @@ public class BattleManager : MonoBehaviour
         if(catchChance == 1 || catchChance == 2)
         {
             isCatched = true;
+            InventoryManager.Instance.catchedPokemon.Add(enemy.name);
+            BattleOver();
         }
         Debug.Log(isCatched);
         StartCoroutine(ChangeTurnDelay(1.5f));
